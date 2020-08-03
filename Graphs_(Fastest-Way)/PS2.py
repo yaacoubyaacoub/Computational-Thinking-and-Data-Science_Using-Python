@@ -155,7 +155,7 @@ def get_best_path(digraph, start, end, path, max_dist_outdoors, best_dist, best_
         # print("node:", node)
         if node.get_destination() not in path:
             # print(node.get_destination(), "is node not in path")
-            newPath = get_best_path(digraph, node.get_destination(), end, path, max_dist_outdoors, best_dist, best_path)
+            newPath = get_best_path(digraph, node.get_destination().get_name(), end.get_name(), path, max_dist_outdoors, best_dist, best_path)
             # print("new Path:", newPath)
             if newPath is not None:
                 current_distance_outdoors = distance_outdoors(digraph, newPath)
